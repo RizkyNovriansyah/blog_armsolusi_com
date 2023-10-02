@@ -16,18 +16,11 @@ def print_letters(letters):
 numbers = [1, 2, 3, 4, 5]
 letters = "abcde"
 
-# Membuat dua thread
-thread1 = threading.Thread(target=print_numbers, args=[numbers])
-thread2 = threading.Thread(target=print_letters, args=[letters])
+# Memanggil fungsi yang akan dieksekusi
+print_numbers(numbers)
+print_letters(letters)
 
-# Memulai kedua thread
-thread1.start()
-thread2.start()
-
-# Menunggu kedua thread selesai
-thread1.join()
-thread2.join()
 print("Selesai")
 
 # check berapa lama waktu yang dibutuhkan untuk mengeksekusi program
-# $ time python3 threading/thread.py 
+# $ time python3 threading/nonthread.py 
